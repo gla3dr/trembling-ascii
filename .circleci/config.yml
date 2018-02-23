@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  test:
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: npm test
+  publish:
+    steps:
+      - checkout
+      - run:
+          name: Publish
+          command: npm run publish
+workflows:
+  version: 2
+  test_and_publish:
+    jobs:
+      - test
+      - publish:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
