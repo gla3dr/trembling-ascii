@@ -20,7 +20,10 @@ workflows:
   version: 2
   test_and_publish:
     jobs:
-      - test
+      - test:
+          filters:
+            branches:
+              ignore: gh-pages
       - publish:
           requires:
             - test
