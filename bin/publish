@@ -12,7 +12,7 @@ let dist = path.join(__dirname, '..', 'dist');
 
 let options = {
     logger: console.log,
-    message: 'Update gh-pages',
+    message: 'Update gh-pages [ci skip]',
     user: {
         name: 'gla3dr',
         email: 'zmayoh@gmail.com'
