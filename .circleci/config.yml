@@ -2,20 +2,20 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-          name: Test
-          command: npm run test
+      - run: npm install
+      - run: npm test
+
   publish:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:latest
     steps:
       - checkout
-      - run:
-          name: Publish
-          command: npm run publish
+      - run: npm install
+      - run: npm run publish
+
 workflows:
   version: 2
   test_and_publish:
