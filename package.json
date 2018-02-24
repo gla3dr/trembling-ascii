@@ -5,7 +5,7 @@
     "main": "src/js/index.js",
     "scripts": {
         "compile": "harp compile src dist",
-        "publish": "npm run compile && bin/publish",
+        "publish": "npm run compile && node bin/publish",
         "clean": "rm -rf ./dist/",
         "test": "echo \"Error: no test specified\" && exit 0"
     },
@@ -20,7 +20,6 @@
     },
     "homepage": "https://github.com/gla3dr/trembling-ascii#readme",
     "devDependencies": {
-        "coffeescript": "^2.2.2",
         "eslint": "^4.18.1",
         "gh-pages": "^1.1.0",
         "harp": "^0.25.0"
